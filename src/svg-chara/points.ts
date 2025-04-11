@@ -19,10 +19,10 @@ const SKINNY_HIPMOD = -2;
 const FAT_HIPMOD = 5;
 const SKINNY_SHOULDERMOD = -2;
 const FAT_SHOULDERMOD = 1;
-const BELLY_PEAK_UP = 20; // Location of belly peak, up from hip, in percent
-const BELLY_END = 40; // end of belly, up from hip, in percent
-const SKINNY_BELLYIN = 5;
-const FAT_BELLYOUT = 15;
+// const BELLY_PEAK_UP = 20; // Location of belly peak, up from hip, in percent
+// const BELLY_END = 40; // end of belly, up from hip, in percent
+// const SKINNY_BELLYIN = 5;
+// const FAT_BELLYOUT = 15;
 
 
 const LEG_MIN_LENGTH = 40;
@@ -54,19 +54,19 @@ function polarToPoint(origin: Point, angle: number, distance: number): Point {
   };
 }
 
-function getAngle(p1: Point, p2: Point): number {
-  const dx = p2.x - p1.x;
-  const dy = p2.y - p1.y;
-  return Math.atan2(dy, dx);
-}
+// function getAngle(p1: Point, p2: Point): number {
+//   const dx = p2.x - p1.x;
+//   const dy = p2.y - p1.y;
+//   return Math.atan2(dy, dx);
+// }
 
 function degToRad(degrees: number): number {
   return (degrees * Math.PI) / 180;
 }
 
-function radToDeg(radians: number): number {
-  return (radians * 180) / Math.PI;
-}
+// function radToDeg(radians: number): number {
+//   return (radians * 180) / Math.PI;
+// }
 
 export interface CharaDrawPoints {
   leftShoulderPeak: Point;
@@ -89,7 +89,7 @@ export interface CharaDrawPoints {
   rightFoot: Point;
   headMidpoint: Point;
 }
-export function getDrawPoints(chara: Chara, pose: Pose): CharaDrawPoints {
+export function getDrawPoints(chara: Chara, _: Pose): CharaDrawPoints {
   const torsoHeight = lerpScalar(chara.torsoHeight, TORSO_MIN_HEIGHT, TORSO_MAX_HEIGHT);
   const hipY = torsoHeight / 2;
 
