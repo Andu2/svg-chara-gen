@@ -51,6 +51,7 @@ function defaultChara(): Chara {
     jawHeight: 50,
     jawWidth: 50,
     chinWidth: 50,
+    posture: 50,
     hatType: 0,
     hatColor: '#909090',
     eyeColor: '#909090',
@@ -78,6 +79,7 @@ function randomChara(): Chara {
     jawHeight: randomParameter(),
     jawWidth: randomParameter(),
     chinWidth: randomParameter(),
+    posture: randomParameter(),
     hatType: randomHatType(),
     hatColor: randomColor(),
     eyeColor: randomColor(),
@@ -138,6 +140,9 @@ export function useCharaState() {
   const setChinWidth = (value: number) => {
     setChara((prev) => ({ ...prev, chinWidth: constrainParameter(value) }));
   }
+  const setPosture = (value: number) => {
+    setChara((prev) => ({ ...prev, posture: constrainParameter(value) }));
+  }
   const setHatType = (value: number) => {
     setChara((prev) => ({ ...prev, hatType: constrainHatType(value) }));
   }
@@ -188,6 +193,7 @@ export function useCharaState() {
     setJawHeight,
     setJawWidth,
     setChinWidth,
+    setPosture,
     setHatType,
     setHatColor,
     setEyeColor,

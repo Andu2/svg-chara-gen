@@ -85,6 +85,7 @@ export function CharaControls({ charaState }: CharaControlsProps) {
         <ParameterInput labelText="Jaw height" value={charaState.chara.jawHeight} setter={charaState.setJawHeight} />
         <ParameterInput labelText="Jaw width" value={charaState.chara.jawWidth} setter={charaState.setJawWidth} />
         <ParameterInput labelText="Chin width" value={charaState.chara.chinWidth} setter={charaState.setChinWidth} />
+        <ParameterInput labelText="Posture" value={charaState.chara.posture} setter={charaState.setPosture} />
         <HatInput labelText="Hat type" value={charaState.chara.hatType} setter={charaState.setHatType} />
         <ColorInput labelText="Hat color" value={charaState.chara.hatColor} setter={charaState.setHatColor} />
       </div>

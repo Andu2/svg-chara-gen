@@ -1,8 +1,3 @@
-export interface Point {
-  x: number;
-  y: number;
-}
-
 export interface Chara {
   shoulderWidth: number;
   hipWidth: number;
@@ -15,6 +10,7 @@ export interface Chara {
   jawHeight: number;
   jawWidth: number;
   chinWidth: number;
+  posture: number;
   hatType: number;
   hatColor: string;
   eyeColor: string;
@@ -26,4 +22,8 @@ export interface Chara {
   mouthSize: number;
   mouthRaise: number;
   expressiveness: number;
+}
+
+export enum Pose {
+  Neutral = 0,
 }
